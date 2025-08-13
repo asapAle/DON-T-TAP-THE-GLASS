@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dtfkk4ehav2dw"]
+
+[ext_resource type="Texture2D" uid="uid://cakh0vcj18o1h" path="res://phone.png" id="1_q3okg"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n710f"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qup15"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xvtfh"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fntcy"]
+
+[node name="Celu" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.38419e-07, -2.38419e-07)
+scale = Vector2(3.67236, 3.67236)
+texture = ExtResource("1_q3okg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-18, -104)
+shape = SubResource("WorldBoundaryShape2D_n710f")
+one_way_collision_margin = 0.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-9, 94)
+shape = SubResource("WorldBoundaryShape2D_qup15")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(147, -1)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_xvtfh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-147, -20)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_fntcy")

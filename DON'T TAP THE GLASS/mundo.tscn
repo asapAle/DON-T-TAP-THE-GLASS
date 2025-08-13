@@ -1,0 +1,84 @@
+[gd_scene load_steps=14 format=3 uid="uid://dwnds30ly4x7v"]
+
+[ext_resource type="Script" uid="uid://dsbrbkq5ivyq2" path="res://mundo.gd" id="1_t8jxu"]
+[ext_resource type="Texture2D" uid="uid://bghw4fqx6kw8d" path="res://fondo.png" id="2_57gmc"]
+[ext_resource type="PackedScene" uid="uid://dtfkk4ehav2dw" path="res://celu.tscn" id="2_otwa2"]
+[ext_resource type="Script" uid="uid://cks6howkckexy" path="res://enemy.gd" id="3_otwa2"]
+[ext_resource type="Texture2D" uid="uid://dwgqhegv86twv" path="res://Assets/hand.png" id="5_57gmc"]
+[ext_resource type="Texture2D" uid="uid://hhkkwcq47mla" path="res://Assets/vidas1.png" id="6_pfhxm"]
+[ext_resource type="Texture2D" uid="uid://ddydnhek7c81m" path="res://Assets/level_1.png" id="6_pij3u"]
+[ext_resource type="AudioStream" uid="uid://7xviqol22qyr" path="res://Assets/Hotline Miami Soundtrack _ Hydrogen(MP3_160K) (mp3cut.net).mp3" id="7_57gmc"]
+[ext_resource type="Texture2D" uid="uid://b3f2bq7fgfsah" path="res://Assets/vidas2.png" id="7_pij3u"]
+[ext_resource type="Texture2D" uid="uid://hml81105jbis" path="res://Assets/vidas3.png" id="8_0oi55"]
+[ext_resource type="Texture2D" uid="uid://dechu532fh8m3" path="res://Assets/stage2.png" id="10_0oi55"]
+[ext_resource type="Texture2D" uid="uid://b3kbqn8rkenno" path="res://Assets/stage3.png" id="11_57gmc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ckkb"]
+radius = 18.0278
+
+[node name="Mundo" type="Node2D"]
+script = ExtResource("1_t8jxu")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(433, 191)
+scale = Vector2(6.73633, 6.73633)
+texture = ExtResource("2_57gmc")
+
+[node name="Celu" parent="." instance=ExtResource("2_otwa2")]
+position = Vector2(454, 240)
+
+[node name="Enemy" type="Area2D" parent="."]
+script = ExtResource("3_otwa2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
+z_index = 1
+position = Vector2(1, -9.53674e-07)
+scale = Vector2(0.488281, 0.488281)
+texture = ExtResource("5_57gmc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+shape = SubResource("CircleShape2D_5ckkb")
+
+[node name="LevelOne" type="Sprite2D" parent="."]
+position = Vector2(454, 240)
+scale = Vector2(3.6875, 3.70313)
+texture = ExtResource("6_pij3u")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_57gmc")
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Vida1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(107, 43)
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("6_pfhxm")
+
+[node name="Vida2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(108, 43)
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("7_pij3u")
+
+[node name="Vida3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(107, 43)
+scale = Vector2(0.405, 0.405)
+texture = ExtResource("8_0oi55")
+
+[node name="Stage1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(467, 245)
+scale = Vector2(3.80273, 3.80273)
+
+[node name="Stage2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(453.906, 240.906)
+scale = Vector2(3.67334, 3.67334)
+texture = ExtResource("10_0oi55")
+
+[node name="Stage3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(454, 240)
+scale = Vector2(3.67041, 3.67041)
+texture = ExtResource("11_57gmc")
+
+[node name="Sage4" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(452, 241)
+scale = Vector2(3.80469, 3.80469)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7xviqol22qyr"
+path="res://.godot/imported/Hotline Miami Soundtrack _ Hydrogen(MP3_160K) (mp3cut.net).mp3-6517a18b24d2ceecdc1a055321b9899a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Hotline Miami Soundtrack _ Hydrogen(MP3_160K) (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/Hotline Miami Soundtrack _ Hydrogen(MP3_160K) (mp3cut.net).mp3-6517a18b24d2ceecdc1a055321b9899a.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

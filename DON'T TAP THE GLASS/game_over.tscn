@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmpqqaw4pxcdo"]
+
+[ext_resource type="Script" uid="uid://crji5u8hd3gi4" path="res://game_over.gd" id="1_yxx3c"]
+[ext_resource type="Texture2D" uid="uid://byjubdnip5vhw" path="res://Assets/fondos-de-arte-de-pixeles.jpg" id="2_ccer4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u835"]
+bg_color = Color(0.6, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftari"]
+bg_color = Color(0.6, 0, 0, 1)
+
+[node name="Game over" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yxx3c")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = -18.0
+offset_top = -41.5
+offset_right = 882.0
+offset_bottom = 604.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ccer4")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 186.0
+offset_top = 93.0
+offset_right = -224.0
+offset_bottom = -188.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.926237, 0.000559785, 0.000308422, 1)
+text = "GAME OVER
+"
+horizontal_alignment = 1
+
+[node name="REINTENTAR" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_8u835")
+text = "Reintentar
+"
+
+[node name="INICIO" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftari")
+text = "Inicio"
+
+[connection signal="pressed" from="VBoxContainer/REINTENTAR" to="." method="_on_reintentar_pressed"]
+[connection signal="pressed" from="VBoxContainer/INICIO" to="." method="_on_inicio_pressed"]
