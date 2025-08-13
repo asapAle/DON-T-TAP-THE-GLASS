@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0ndrsqkq77mh"]
+[gd_scene load_steps=7 format=3 uid="uid://d0ndrsqkq77mh"]
 
 [ext_resource type="Texture2D" uid="uid://byjubdnip5vhw" path="res://Assets/fondos-de-arte-de-pixeles.jpg" id="1_lubpe"]
 [ext_resource type="Script" uid="uid://c4k22brpww4oh" path="res://niveles.gd" id="1_u0uhv"]
+[ext_resource type="FontFile" uid="uid://dxjoyosod34j0" path="res://Assets/ari-w9500-condensed-display.ttf" id="3_p8yhe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p8yhe"]
 bg_color = Color(0.0966, 0.69, 0.16583, 0.701961)
@@ -42,24 +43,27 @@ alignment = 1
 [node name="nivel 1" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_p8yhe")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_p8yhe")
-text = "Nivel 1"
+text = "Facil"
 
 [node name="nivel 2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.849238, 0.372229, 0, 1)
+theme_override_fonts/font = ExtResource("3_p8yhe")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_3e6ya")
-text = "Nivel 2
+text = "Intermedio
 "
 
 [node name="nivel 3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_p8yhe")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_kql2t")
-text = "Nivel 3"
+text = "Dificil"
 
 [connection signal="pressed" from="VBoxContainer/nivel 1" to="." method="_on_nivel_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/nivel 2" to="." method="_on_nivel_2_pressed"]

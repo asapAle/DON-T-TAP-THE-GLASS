@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://vlbwi2vbp5si"]
+[gd_scene load_steps=6 format=3 uid="uid://vlbwi2vbp5si"]
 
 [ext_resource type="Texture2D" uid="uid://byjubdnip5vhw" path="res://Assets/fondos-de-arte-de-pixeles.jpg" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://bjrf0l3diax44" path="res://menu.gd" id="1_ouk20"]
+[ext_resource type="FontFile" uid="uid://dxjoyosod34j0" path="res://Assets/ari-w9500-condensed-display.ttf" id="3_mae5d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
 bg_color = Color(0, 0, 0, 1)
@@ -44,18 +45,21 @@ alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-text = "Don't Tap The Glass"
+theme_override_fonts/font = ExtResource("3_mae5d")
+text = "DON'T TAP THE GLASS"
 horizontal_alignment = 1
 
 [node name="PLAY" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_mae5d")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
 text = "JUGAR"
 
 [node name="QUIT" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_mae5d")
 theme_override_styles/normal = SubResource("StyleBoxFlat_4hy44")
 text = "SALIR"
 text_overrun_behavior = 2

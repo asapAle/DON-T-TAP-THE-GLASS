@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmpqqaw4pxcdo"]
+[gd_scene load_steps=6 format=3 uid="uid://cmpqqaw4pxcdo"]
 
 [ext_resource type="Script" uid="uid://crji5u8hd3gi4" path="res://game_over.gd" id="1_yxx3c"]
 [ext_resource type="Texture2D" uid="uid://byjubdnip5vhw" path="res://Assets/fondos-de-arte-de-pixeles.jpg" id="2_ccer4"]
+[ext_resource type="FontFile" uid="uid://dxjoyosod34j0" path="res://Assets/ari-w9500-condensed-display.ttf" id="3_ccer4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u835"]
 bg_color = Color(0.6, 0, 0, 1)
@@ -46,20 +47,27 @@ theme_override_constants/separation = 10
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.926237, 0.000559785, 0.000308422, 1)
+theme_override_fonts/font = ExtResource("3_ccer4")
 text = "GAME OVER
 "
 horizontal_alignment = 1
 
 [node name="REINTENTAR" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ccer4")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8u835")
 text = "Reintentar
 "
 
 [node name="INICIO" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ccer4")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ftari")
 text = "Inicio"
+
+[node name="LabelScore" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ccer4")
 
 [connection signal="pressed" from="VBoxContainer/REINTENTAR" to="." method="_on_reintentar_pressed"]
 [connection signal="pressed" from="VBoxContainer/INICIO" to="." method="_on_inicio_pressed"]
