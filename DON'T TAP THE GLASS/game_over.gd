@@ -1,6 +1,6 @@
 extends Control
 
-@onready var label_score = $VBoxContainer/LabelScore # Ajustá según tu escena
+@onready var label_score = $LabelScore  # Ajustá según tu escena
 
 func _ready():
 	# Mostrar puntaje de la partida

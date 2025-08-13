@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var SCENE_PATH: String = "res://mundo.tscn"  # Cambiá esto en cada escena
+@export var SCENE_PATH: String = "res://mundo.tscn"  # Cambiá en cada mundo
 
 @onready var enemy = $Enemy
 @onready var vidas = [
@@ -31,16 +31,20 @@ func _on_enemy_missed():
 	update_life_sprites()
 	print("Vidas restantes: ", lives)
 	if lives <= 0:
-		# Guardar ruta actual antes de ir a Game Over
+		# Guardar la escena actual y el puntaje antes de ir a Game Over
 		get_tree().set_meta("ultima_escena", SCENE_PATH)
+		get_tree().set_meta("ultimo_score", score)
 		get_tree().change_scene_to_file("res://game_over.tscn")
 
 func update_life_sprites():
+	# Mostrar u ocultar vidas
 	for i in range(vidas.size()):
 		vidas[i].visible = (i < lives)
 
+	# Ocultar todos los stages
 	for stage in stages:
 		stage.visible = false
 
+	# Mostrar el stage correspondiente
 	if lives > 0 and lives <= stages.size():
 		stages[stages.size() - lives].visible = true
